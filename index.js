@@ -15,9 +15,15 @@ Do the following:
    1. Create a variable called votingAge and assign it a value
    2. Console log true if age is 18 or higher
 
+    
+
    HINT: no function required
 */
 
+//1A
+
+    var votingAge = 18;
+    console.log(votingAge);
 
 
 /*
@@ -31,7 +37,11 @@ Do the following:
    HINT: no function required
 */
 
+var x = 3;
+var y = 2;
 
+var z = x + y;
+console.log(z);
 
 
 
@@ -58,9 +68,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+
+function multiply(x,y){
+  return x*y;
+}
 
 
 
@@ -74,8 +85,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+
+var dogYearsCal = 7;
+var x = 3;
+function dogYears(x,dogYearsCal){
+    return x*dogYearsCal;
 }
 
 
@@ -107,8 +121,18 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(age,lbs) 
+  {
+    if (age >= 1);
+    {
+      return lbs*0.5
+
+    } else if (lbs <= 10 && lbs >=6){
+      return lbs* 0.04;
+    }
+    else {
+      return lbs* 0.08
+    }
   }
 
 
@@ -134,8 +158,21 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
+function game(user, computer)
+{
+  var userChoice = prompt ("Do you choose rock, paper or scissors?");
+
+  var computerChoice = Math.random();
+  console.log(computerChoice);
+  
+  if (computerChoice <=0.33) {
+      "rock";
+  } else if (computerChoice <=0.66) {
+      "paper";
+  } else {
+      "scissors";
+  }
+
 }
   
   
@@ -151,9 +188,16 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+// taking kilometers input from the user
+const kilometers = prompt("Enter value in kilometers: ")
+
+// conversion factor
+const factor = 0.621371
+
+// calculate miles
+const miles = kilometers * factor
+
+console.log(`${kilometers} kilometers is equal to ${miles} miles.`);
 
 
 
@@ -165,9 +209,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function toFeet(n) {
+  var realFeet = ((n*0.393700) / 12);
+  var feet = Math.floor(realFeet);
+  var inches = Math.round((realFeet - feet) * 12);
+  return feet + "&prime;" + inches + '&Prime;';
+}
  
 
 
@@ -181,9 +228,22 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+var count = 99;
+while (count > 0) {
+    console.log(count + " " + getBottleWord(count) + " of soda on the wall");
+    console.log(count + " " + getBottleWord(count) + " of soda,");
+    console.log("Take one down, pass it around,");
+    count = count - 1;
+    if (count > 0) {
+        console.log(count + " " + getBottleWord(count) + " of soda on the wall.");
+    } else {
+        console.log("No more " + getBottleWord(count) + " of soda on the wall.");
+    }
+}
+
+function getBottleWord(count) {
+    return count === 1 ? "bottle" : "bottles";
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -201,8 +261,22 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade()
+  {
+    if (gradeData >= 90) {
+      return 'you got an A';
+    }
+    if (gradeData >= 80) {
+        return 'you got a B';
+    }
+    if (gradeData >= 70) {
+        return 'you got a C';
+    }
+    if (gradeData >= 60) {
+        return 'you got a D';
+    }
+    return 'you got an F';
+
   }
   
   
